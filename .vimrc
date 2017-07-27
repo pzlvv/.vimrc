@@ -9,7 +9,7 @@ set timeout ttimeoutlen=50
 " Pathogen load
 call pathogen#infect()
 call pathogen#helptags()
-filetype off
+filetype plugin indent on
 syntax on
 
 "Go
