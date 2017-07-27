@@ -12,22 +12,6 @@ call pathogen#helptags()
 filetype plugin indent on
 syntax on
 
-"Go
-au FileType go map <leader>r :!go run %<CR>
-let g:go_fmt_command = "goimports"
-
-"Python
-let g:pymode_python = 'python3'
-let g:pymode_options = 0
-au FileType python map <F5> :!python %<CR>
-
-"Format Json
-noremap <leader>fj :%!python -m json.tool<cr>
-vnoremap <leader>fj !python -m json.tool<cr>
-
-"Quick config edit
-noremap <leader>ev :vsplit $MYVIMRC<cr>
-
 "Basic
 let mapleader = ","
 inoremap jk <ESC>
@@ -38,6 +22,11 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set foldlevel=99
+colors molokai
+
+if has("gui_running")
+    set guifont=Source\ Code\ Pro\ Regular\ 12
+endif
 
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
@@ -57,3 +46,20 @@ nmap 0 0gt
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
+
+"Go
+au FileType go map <leader>r :!go run %<CR>
+let g:go_fmt_command = "goimports"
+
+"Python
+let g:pymode_python = 'python3'
+let g:pymode_options = 0
+au FileType python map <F5> :!python %<CR>
+
+"Format Json
+noremap <leader>fj :%!python -m json.tool<cr>
+vnoremap <leader>fj !python -m json.tool<cr>
+
+"Quick config edit
+noremap <leader>ev :vsplit $MYVIMRC<cr>
+
