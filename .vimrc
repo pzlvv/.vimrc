@@ -23,11 +23,8 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set foldlevel=99
-colors molokai
 
-if has("gui_running")
-    set guifont=Source\ Code\ Pro\ Regular\ 12
-endif
+colors molokai
 
 if has("gui_running")
     set guifont=Source\ Code\ Pro\ Regular\ 10
